@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+/* h1, h2, h3, h4, h5, h6 {
+  margin: .5rem 0;
+}
+/* p {
+  margin: .5rem 0;
+} */
+
+.debug > * { outline: 3px solid gold !important; }
+
+.navbar {
+  --navbar-bg: #222;
+  --navbar-color: #eee;
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0; right: 0; left: 0;
+  z-index: 10;
+  
+  padding: 0 2rem;
+  height: 5rem;
+  max-height: 5rem;
+  background-color: var(--navbar-bg);
+  color: var(--navbar-color);
+}
+.navbar ul, .navbar ol {
+  list-style-type: none;
+  padding: 0;
+}
+.navbar a {
+  color: inherit;
+  text-decoration: none;
+}
+.navbar__branding {
+  display: flex;
+  align-items: center;
+  width: min-content;
+  height: 100%;
+  flex-grow: 1;
+}
+.navbar__branding-logo {
+  width: 3rem; height: 3rem;
+}
+/* How to flex without container? Use Grid instead? */
+.navbar__branding-text {
+  display: flex;
+  flex-direction: column;
+  padding-left: 1rem;
+}
+.navbar__branding-name {
+  font-size: 1.5rem; /* Optional */
+  font-weight: bolder;
+}
+.navbar__branding-tagline {
+  display: none;
+}
+.navbar__button {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  min-width: 2rem;
+  width: 2rem;
+  min-height: 2rem;
+  height: 2rem;
+  cursor: pointer;
+  transition: 300ms transform;
+}
+.navbar__button:hover {
+  transform: scale(1.15);
+}
+.navbar__button-line {
+  width: 100%;
+  height: .25rem;
+  background-color: var(--navbar-color);
+  border-radius: 5rem;
+  transition: 300ms transform, 300ms opacity;
+}
+/* Button Line Transition */
+.navbar__button--active > .navbar__button-line:nth-child(1) {
+  transform: translateY(.88rem) rotate(45deg);
+}
+.navbar__button--active > .navbar__button-line:nth-child(2) {
+  opacity: 0;
+}
+.navbar__button--active > .navbar__button-line:nth-child(3) {
+  transform: translateY(-.88rem) rotate(-45deg);
+}
+.navbar__nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  position: static;
+  padding: 0;
+  min-width: 50%;
+  height: 100%;
+  border: none;
+  text-align: center;
+}
+.navbar__links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: static;
+}
+.navbar__links-item {
+  display: block;
+  position: relative;
+  min-width: auto;
+  padding: .5rem .5rem;
+}
+@media (max-width: 900px) {
+  .navbar__button {
+    display: flex;
+  }
+  
+  .navbar__nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    position: absolute;
+    top: 100%; right: 0; bottom: 0; left: 0;
+    padding: 2rem;
+    height: 90vh;
+    height: calc(100vh - 5rem);
+    background-color: inherit;
+    opacity: 0;
+    pointer-events: none;
+    text-align: right;
+  }
+  .navbar__nav--active {
+    opacity: 1;
+    pointer-events: all;
+    transition: 300ms opacity;
+  }
+  
+}
+
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  margin: 2rem 0;
+  padding: 2rem;
+  height: 50vh;
+  background-color: #eee;
+}
+@media (min-width: 600px) {
+  section {
+    text-align: center;
+  }
+}
+footer {
+  padding: 2rem;
+  background-color: #444;
+  color:#eee;
+}
+.button-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border: 1px solid #444;
+  border-radius: 50rem;
+}
+.button-row > * {
+  flex-grow: 1;
+  margin: 0 .5rem;
+  padding: .5rem;
+  text-align: center;
+}
+  </style>
+</head>
+<body>
+  <header class="navbar">
+    <a class="navbar__branding" href="">
+      <img class="navbar__branding-logo" alt="Logos" src="./" />
+      <div class="navbar__branding-text">
+        <div class="navbar__branding-name">Wasteless.US</div>
+        <div class="navbar__branding-tagline">Saving the World</div>
+      </div>
+    </a>
+    
+    
+    <div class="navbar__button" id="navbar__button" onclick="
+      document.getElementById('navbar__button')
+        .classList.toggle('navbar__button--active');
+      document.getElementById('navbar__nav')
+        .classList.toggle('navbar__nav--active');
+    ">
+      <div class="navbar__button-line"></div>
+      <div class="navbar__button-line"></div>
+      <div class="navbar__button-line"></div>
+    </div>
+    
+    
+    
+    <nav class="navbar__nav" id="navbar__nav">
+      <ul class="navbar__links">
+        <li class="navbar__links-item"><a class="navbar__links-link" href="#">Learn More</a></li>
+        <li class="navbar__links-item"><a class="navbar__links-link" href="#">Shop</a></li>
+        <li class="navbar__links-item"><a class="navbar__links-link" href="#">Volunteer</a></li>
+      </ul>
+    </nav>
+    
+  </header>
+  <header>uppernav</header>
+  <section id="cover">
+    <h1>Help Save The World</h1>
+    <p>Learn how to waste less, volunteer for a clean up, or visit our shop to live a wasteless life!</p>
+    <div class="button-row">
+      <a href="#blog">Learn More</a>
+      <a href="#volunteer">Volunteer</a>
+      <a href="#shop">Shop Wasteless</a>
+    </div>
+  </section>
+  <section id="volunteer">
+    <h2>Volunteer</h2>
+    <p>At any of our clean-up events across Long Island, New York! 
+    <br />
+    Work with people who care about the planet</p>
+  </section>
+  <section id="shop">
+    <h2>Shop Wasteless</h2>
+    <p>Check our shop of products that will help you life a Wasteless Life!</p>
+  </section>
+  <section id="blog">
+    <h2>Learn More</h2>
+    <p>Visit our Blog to learn about Wasteless, the pollution problem, and what we can do!</p>
+  </section>
+  <section id="community">
+    <h2>Join our Growing Community</h2>
+    <p>Join the discussion on Facebook, Instagram, Twitter, Discord, and our site forums!</p>
+  </section>
+  <footer>
+    footer
+  </footer>
+</body>
+</html>
