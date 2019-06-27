@@ -4,7 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <link rel="shortcut icon" type="image/png" href="./assets/favicons/favicon.ico"/>
+
+  <title>Wasteless.US - Help Save the World</title>
+  
   <style>
 body {
   margin: 0;
@@ -54,6 +57,7 @@ body {
 }
 .navbar__branding-logo {
   width: 3rem; height: 3rem;
+  border-radius: 100rem;
 }
 /* How to flex without container? Use Grid instead? */
 .navbar__branding-text {
@@ -66,7 +70,7 @@ body {
   font-weight: bolder;
 }
 .navbar__branding-tagline {
-  display: none;
+  display: block;
 }
 .navbar__button {
   display: none;
@@ -84,6 +88,7 @@ body {
   transform: scale(1.15);
 }
 .navbar__button-line {
+  display: block;
   width: 100%;
   height: .25rem;
   background-color: var(--navbar-color);
@@ -124,7 +129,7 @@ body {
   min-width: auto;
   padding: .5rem .5rem;
 }
-@media (max-width: 900px) {
+@media (max-width: 600px) {
   .navbar__button {
     display: flex;
   }
@@ -153,45 +158,72 @@ body {
 }
 
 
-section {
+.section {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: stretch;
-  margin: 2rem 0;
+  position: relative;
+  margin-bottom: 2rem;
   padding: 2rem;
-  height: 50vh;
+  min-height: 50vh;
+  overflow: hidden;
   background-color: #eee;
 }
 @media (min-width: 600px) {
-  section {
+  .section {
     text-align: center;
   }
 }
+.cover-video {
+  position: absolute;
+  top: -1rem; right: -1rem; bottom: -1rem; left: -1rem;
+  z-index: -1;
+  min-width: 100%;
+  filter: blur(.5rem);
+}
+
 footer {
   padding: 2rem;
   background-color: #444;
-  color:#eee;
+  color: #eee;
 }
 .button-row {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  border: 1px solid #444;
-  border-radius: 50rem;
 }
-.button-row > * {
-  flex-grow: 1;
-  margin: 0 .5rem;
+@media (max-width: 600px) {
+  .button-row {
+    flex-direction: column;
+  }
+}
+.button {
+  margin: .5rem;
   padding: .5rem;
+  width: 100%;
+  border: 1px solid;
+  border-color: inherit;
+  border-radius: 100rem;
+  color: inherit;
+  cursor: pointer;
   text-align: center;
+  transition: 300ms all;
+}
+.button:hover {
+  transform: scale(1.1);
+}
+#cover {
+  background-color: transparent;
+  color: #eee;
+  text-shadow: 0 0 4px #222;
 }
   </style>
 </head>
 <body>
   <header class="navbar">
-    <a class="navbar__branding" href="">
-      <img class="navbar__branding-logo" alt="Logos" src="./" />
+    <a class="navbar__branding" href="./index.html#">
+      <img class="navbar__branding-logo" alt="Logos" src="./assets/logo.jpg" />
       <div class="navbar__branding-text">
         <div class="navbar__branding-name">Wasteless.US</div>
         <div class="navbar__branding-tagline">Saving the World</div>
@@ -205,10 +237,10 @@ footer {
       document.getElementById('navbar__nav')
         .classList.toggle('navbar__nav--active');
     ">
-      <div class="navbar__button-line"></div>
-      <div class="navbar__button-line"></div>
-      <div class="navbar__button-line"></div>
-    </div>
+      <span class="navbar__button-line"></span>
+      <span class="navbar__button-line"></span>
+      <span class="navbar__button-line"></span>
+  </div>
     
     
     
@@ -221,33 +253,41 @@ footer {
     </nav>
     
   </header>
-  <header>uppernav</header>
-  <section id="cover">
+  <!-- <header>uppernav</header> -->
+  <section id="cover" class="section">
+    <video class="cover-video" autoplay muted loop>
+        <source src="assets/ocean-waste.mp4" type="video/mp4">
+    </video>
     <h1>Help Save The World</h1>
     <p>Learn how to waste less, volunteer for a clean up, or visit our shop to live a wasteless life!</p>
     <div class="button-row">
-      <a href="#blog">Learn More</a>
-      <a href="#volunteer">Volunteer</a>
-      <a href="#shop">Shop Wasteless</a>
+      <a class="button" href="#blog">Learn More</a>
+      <a class="button" href="#volunteer">Volunteer</a>
+      <a class="button" href="#shop">Shop Wasteless</a>
+      
     </div>
   </section>
-  <section id="volunteer">
+  <section id="volunteer" class="section">
     <h2>Volunteer</h2>
     <p>At any of our clean-up events across Long Island, New York! 
     <br />
     Work with people who care about the planet</p>
+    <!-- Map of cleanups, picture of volunteers -->
   </section>
-  <section id="shop">
+  <section id="shop" class="section">
     <h2>Shop Wasteless</h2>
     <p>Check our shop of products that will help you life a Wasteless Life!</p>
+    <!-- Carousel or Picture of products -->
   </section>
-  <section id="blog">
+  <section id="blog" class="section">
     <h2>Learn More</h2>
     <p>Visit our Blog to learn about Wasteless, the pollution problem, and what we can do!</p>
+    <!-- Pictures of people explaining on a beach, blurred pictures of blog posts -->
   </section>
-  <section id="community">
+  <section id="community" class="section">
     <h2>Join our Growing Community</h2>
     <p>Join the discussion on Facebook, Instagram, Twitter, Discord, and our site forums!</p>
+    <!-- Picture of people at a beach cleanup, or "Discussion" cartoon -->
   </section>
   <footer>
     footer
