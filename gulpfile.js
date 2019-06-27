@@ -18,7 +18,7 @@ const paths = {
     dest: 'dist/asset/'
   },
   html: {
-    src: 'src/html/**/*.html',
+    src: 'src/**/*.html',
     dest: 'dist/'
   },
   css: {
