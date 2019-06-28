@@ -1,6 +1,6 @@
 $navbar-bg: color(dark);
 $navbar-color: color(light);
-$navbar-bkpt: 600px;
+$navbar-bkpt: bkpt(md);
 
 .navbar {
   display: flex;
@@ -58,11 +58,6 @@ $navbar-bkpt: 600px;
     min-height: 2rem;
     height: 2rem;
     cursor: pointer;
-    transition: 300ms transform;
-    
-    &:hover {
-      transform: scale(1.15);
-    }
     &-line {
       display: block;
       width: 100%;

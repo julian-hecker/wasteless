@@ -20,7 +20,7 @@
     </a>
     
     
-    <div class="navbar__button" id="navbar__button" onclick="
+    <div class="navbar__button hover-grow" id="navbar__button" onclick="
       document.getElementById('navbar__button')
         .classList.toggle('navbar__button--active');
       document.getElementById('navbar__nav')
@@ -29,15 +29,28 @@
       <span class="navbar__button-line"></span>
       <span class="navbar__button-line"></span>
       <span class="navbar__button-line"></span>
-  </div>
+    </div>
     
     
     
     <nav class="navbar__nav" id="navbar__nav">
       <ul class="navbar__links">
-        <li class="navbar__links-item"><a class="navbar__links-link" href="#">Learn More</a></li>
-        <li class="navbar__links-item"><a class="navbar__links-link" href="#">Shop</a></li>
-        <li class="navbar__links-item"><a class="navbar__links-link" href="#">Volunteer</a></li>
+        <li class="navbar__links-item hover-grow">
+          <a class="navbar__links-link" href="#">Learn More</a>
+        </li>
+        <li class="navbar__links-item hover-grow">
+          <a class="navbar__links-link" href="#">Shop</a>
+        </li>
+        <li class="navbar__links-item hover-grow">
+          <a class="navbar__links-link" href="#">Volunteer</a>
+        </li>
+        <li class="navbar__links-item hover-grow">
+          <a class="navbar__links-link" href="#">Community</a>
+        </li>
+        <li class="navbar__links-item hover-grow">
+          <a class="navbar__links-link" href="#">Account</a>
+        </li>
+        
       </ul>
     </nav>
     
@@ -51,33 +64,36 @@
     <h1>Help Save The World</h1>
     <p>Learn how to waste less, volunteer for a clean up, or visit our shop to live a wasteless life!</p>
     <div class="button-row">
-      <a class="btn" href="#blog">Learn More</a>
-      <a class="btn" href="#volunteer">Volunteer</a>
-      <a class="btn" href="#shop">Shop Wasteless</a>
+      <a class="btn hover-grow" href="#blog">Learn More</a>
+      <a class="btn hover-grow" href="#volunteer">Volunteer</a>
+      <a class="btn hover-grow" href="#shop">Shop Wasteless</a>
       
     </div>
   </section>
   <section id="volunteer" class="section">
     <h2>Volunteer</h2>
     <p>At any of our clean-up events across Long Island, New York! 
-    <br />
+    <br /><br />
     Work with people who care about the planet</p>
-    <a class="btn" href="./volunteer.html">Check Events</a>
+    <a class="btn hover-grow" href="#">Check Events</a>
     <!-- Map of cleanups, picture of volunteers -->
   </section>
   <section id="shop" class="section">
     <h2>Shop Wasteless</h2>
     <p>Check our shop of products that will help you life a Wasteless Life!</p>
+    <a class="btn hover-grow" href="#">Visit the Shop</a>
     <!-- Carousel or Picture of products -->
   </section>
   <section id="blog" class="section">
     <h2>Learn More</h2>
     <p>Visit our Blog to learn about Wasteless, the pollution problem, and what we can do!</p>
+    <a class="btn hover-grow" href="#">Learn more</a>
     <!-- Pictures of people explaining on a beach, blurred pictures of blog posts -->
   </section>
   <section id="community" class="section">
     <h2>Join our Growing Community</h2>
     <p>Join the discussion on Facebook, Instagram, Twitter, Discord, and our site forums!</p>
+    <a class="btn hover-grow" href="#">Join our community!</a>
     <!-- Picture of people at a beach cleanup, or "Discussion" cartoon -->
   </section>
   <footer>
