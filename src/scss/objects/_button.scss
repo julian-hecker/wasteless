@@ -1,23 +1,65 @@
 // =-= Button =-= //
 
 .btn {
-  display: block;
+  display: inline-block;
   position: relative;
   padding: 1rem 2rem;
   width: max-content;
-  border: 1px solid;
-  border-radius: 100rem;
+  background-color: transparent;
+  border: .1rem solid;
+  border-color: transparent;
+  border-radius: .25rem;
   color: inherit;
   cursor: pointer;
-  font-size: inherit;
+  font-size: 1rem;
   text-align: center;
   text-decoration: none;
-  transition: all 300ms;
+  vertical-align: middle;
   white-space: nowrap;
+  @include hover-grow;
+
+  &-disabled {
+    opacity: .65;
+    pointer-events: none;
+  }
+
+  &-round {
+    border-radius: 100rem;
+  }
+  @each $color, $value in $colors {
+    &-#{$color} {
+      background-color: $value;
+      border-color: darken($value, 10%);
+      color: white;
+      &:hover,
+      &:focus,
+      &:active {
+        background-color: darken($value, 10%);
+        border-color: darken($value, 20%);
+      }
+    }
+  }
+
+  @each $color, $value in $colors {
+    &-outline-#{$color} {
+      background-color: transparent;
+      border-color: $value;
+      color: $value;
+      &:hover,
+      &:focus,
+      &:active {
+        border-color: darken($value, 10%);
+        color: darken($value, 10%);
+      }
+    }
+  }
+  &-outline {
+    border-color: currentColor;
+    color: currentColor;
+  }
 }
 
-.btn--trans {
-  background-color: transparent;
-  border-color: inherit;
-  color: inherit;
-}
+
+
+
+
