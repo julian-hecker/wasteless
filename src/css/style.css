@@ -405,6 +405,26 @@ noscript {
   margin-bottom: 1em;
   margin-top: 1em; }
 
+.btn {
+  display: block;
+  position: relative;
+  padding: 1rem 2rem;
+  width: max-content;
+  border: 1px solid;
+  border-radius: 100rem;
+  color: inherit;
+  cursor: pointer;
+  font-size: inherit;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms;
+  white-space: nowrap; }
+
+.btn--trans {
+  background-color: transparent;
+  border-color: inherit;
+  color: inherit; }
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -417,7 +437,7 @@ noscript {
   z-index: 10;
   padding: 0 2rem;
   height: 5rem;
-  background-color: #222;
+  background-color: #333;
   color: #eee; }
   .navbar ul, .navbar ol {
     list-style-type: none;
@@ -519,6 +539,14 @@ noscript {
     .navbar__links {
       flex-direction: column; } }
 
+.hover-grow {
+  transition: 300ms transform; }
+
+.hover-grow:hover,
+.hover-grow:focus,
+.hover-grow:active {
+  transform: scale(1.1); }
+
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; }
 
@@ -536,7 +564,9 @@ body {
 
 @media (min-width: 600px) {
   .section {
-    text-align: center; } }
+    text-align: center; }
+  .btn {
+    margin: auto; } }
 
 .cover-video {
   position: absolute;
@@ -552,36 +582,18 @@ body {
 
 footer {
   padding: 2rem;
-  background-color: #444;
+  background-color: #333;
   color: #eee; }
 
 .button-row {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  flex-wrap: wrap;
   margin: 1rem auto;
   width: 100%; }
-
-@media (max-width: 600px) {
-  .button-row {
-    flex-direction: column; } }
-
-.button {
-  /* margin: .5rem; */
-  padding: .5rem;
-  width: 100%;
-  border: 1px solid;
-  border-color: inherit;
-  border-radius: 100rem;
-  color: inherit;
-  cursor: pointer;
-  text-align: center;
-  transition: 300ms all; }
-
-.button:hover {
-  transform: scale(1.1); }
 
 #cover {
   background-color: transparent;
   color: #eee;
-  text-shadow: 0 0 4px #222; }
+  text-shadow: 0 0 .25rem #222; }

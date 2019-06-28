@@ -1,0 +1,23 @@
+// =-= Button =-= //
+
+.btn {
+  display: block;
+  position: relative;
+  padding: 1rem 2rem;
+  width: max-content;
+  border: 1px solid;
+  border-radius: 100rem;
+  color: inherit;
+  cursor: pointer;
+  font-size: inherit;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms;
+  white-space: nowrap;
+}
+
+.btn--trans {
+  background-color: transparent;
+  border-color: inherit;
+  color: inherit;
+}

@@ -1,24 +1,48 @@
 // =-= Libraries =-= //
-@import './lib/normalize';
+@import './libraries/normalize';
+
 // =-= Helpers =-= //
-// functions, helpers, links, mixins, typography, patterns
+@import './helpers/functions';
+@import './helpers/mixins';
 
 // =-= Variables =-= //
+@import './variables/breakpoints';
+@import './variables/colors';
+// @import './variables/typography';
 
 // =-= Base =-= //
-@import './reset';
+@import './base/reset';
 
 // =-= Layouts =-= //
 
 // =-= Objects =-= //
+@import './objects/button';
+// inputs
+// links
 
 // =-= Components =-= //
-@import './navbar';
+// form
+@import './components/navbar';
+// footer
+// posts, comments, articles
+// modal
+// Sections
+
+
+// =-= Page Specifics =-= //
+
 
 // =-= Utilities =-= //
+.hover-grow {
+  transition: 300ms transform;
+}
+.hover-grow:hover,
+.hover-grow:focus,
+.hover-grow:active {
+  transform: scale(1.1);
+}
 
 // =-= Shame =-= //
-
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -36,9 +60,12 @@ body {
   overflow: hidden;
   background-color: #eee;
 }
-@media (min-width: 600px) {
+@media (min-width: bkpt(sm)) {
   .section {
     text-align: center;
+  }
+  .btn {
+    margin: auto;
   }
 }
 .cover-video {
@@ -53,39 +80,22 @@ body {
 
 footer {
   padding: 2rem;
-  background-color: #444;
-  color: #eee;
+  background-color: color(dark);
+  color: color(light);
 }
 .button-row {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  flex-wrap: wrap;
   margin: 1rem auto;
   width: 100%;
-}
-@media (max-width: 600px) {
-  .button-row {
-    flex-direction: column;
-  }
-}
-.button {
-  /* margin: .5rem; */
-  padding: .5rem;
-  width: 100%;
-  border: 1px solid;
-  border-color: inherit;
-  border-radius: 100rem;
-  color: inherit;
-  cursor: pointer;
-  text-align: center;
-  transition: 300ms all;
-}
-.button:hover {
-  transform: scale(1.1);
 }
 #cover {
   background-color: transparent;
   color: #eee;
-  text-shadow: 0 0 4px #222;
+  text-shadow: 0 0 .25rem #222;
 }
+
+// Typography
 
