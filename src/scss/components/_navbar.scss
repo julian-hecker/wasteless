@@ -2,6 +2,7 @@ $navbar-bg: color(dark);
 $navbar-color: color(primary);
 $navbar-bkpt: bkpt(md);
 
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -105,6 +106,7 @@ $navbar-bkpt: bkpt(md);
       min-width: auto;
       padding: .5rem;
       @include hover-grow;
+      @include hover-darken-color($navbar-color);
     }
   }
   @media (max-width: $navbar-bkpt) {

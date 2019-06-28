@@ -47,3 +47,12 @@
     transform: scale($amount);
   }
 }
+
+@mixin hover-darken-color($color, $amount: 10%) {
+  &:hover,
+  &:focus,
+  &:active {
+    border-color: darken($color, $amount);
+    color: darken($color, $amount * 2);
+  }
+}

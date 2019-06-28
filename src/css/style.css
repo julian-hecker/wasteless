@@ -457,6 +457,9 @@ body {
         transition: 200ms all ease-in-out; }
       .navbar__links-item:hover, .navbar__links-item:focus, .navbar__links-item:active {
         transform: scale(1.15); }
+      .navbar__links-item:hover, .navbar__links-item:focus, .navbar__links-item:active {
+        border-color: #3747a3;
+        color: #2a377d; }
   @media (max-width: 900px) {
     .navbar__button {
       display: flex; }
