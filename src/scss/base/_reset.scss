@@ -1,8 +1,8 @@
 /* CSS Reset from https://github.com/zellwk/css-reset */
 
-/*******************
- Box Sizing
- *******************/
+// *******************//
+// Box Sizing //
+// *******************//
  html {
   box-sizing: border-box;
 }
@@ -13,9 +13,9 @@
   box-sizing: inherit;
 }
 
-/****************************
- Generic Margins and Paddings
- ****************************/
+// ******************* //
+// Generic Margins and Paddings //
+// ******************* // 
 body {
   margin: 0;
 }
@@ -29,25 +29,25 @@ h5,
 h6,
 p,
 pre {
-  margin: .5rem 0;
+  margin: 0 0 .5rem;
 }
 
 hr {
   margin: .5rem auto;
 }
 
-/*******************
- Lists
- *******************/
+// ******************* //
+// Lists //
+// ******************* //
 ul {
   list-style: none;
   margin: 0;
   padding-left: 0;
 }
 
-/*******************
- Forms and buttons
- *******************/
+// ******************* //
+// Forms and buttons //
+// ******************* //
 input,
 textarea,
 select,
@@ -57,20 +57,20 @@ button {
   letter-spacing: inherit;
 }
 
-/* I usually expand input and textarea to full-width */
-input[type="text"],
-textarea {
-  width: 100%;
-}
 
-/* More friendly border */
+// input[type="text"],
+// textarea {
+//   width: 100%;
+// }
+
+// More friendly border
 input,
 textarea,
 button {
   border: 1px solid gray;
 }
 
-/* Some defaults for one-liner buttons */
+// Some defaults for one-liner buttons
 button {
   padding: 0.75em 1em;
   border-radius: 0;
@@ -82,9 +82,9 @@ button * {
   pointer-events: none;
 }
 
-/***********************************
- Easy responsive for media elements
- ***********************************/
+// *********************************** //
+// Easy responsive for media elements //
+// *********************************** //
 img,
 svg,
 iframe,
@@ -95,26 +95,39 @@ embed {
   max-width: 100%;
 }
 
-/*******************
- Useful table styles
- *******************/
+// ******************* //
+// Useful table styles //
+// ******************* //
 table {
   table-layout: fixed;
   width: 100%;
 }
 
-/*******************
- The hidden attribute
- *******************/
+// ******************* //
+// The hidden attribute //
+// ******************* //
 [hidden] {
   display: none !important;
 }
 
-/*******************
- Noscript
- *******************/
+// ******************* //
+// Noscript //
+// ******************* //
 noscript {
   display: block;
   margin-bottom: 1em;
   margin-top: 1em;
+}
+
+// ******************* //
+// Other Generic Settings //
+// ******************* //
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: white;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(black, 0);
 }
