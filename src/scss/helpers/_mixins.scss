@@ -49,10 +49,14 @@
 }
 
 @mixin hover-darken-color($color, $amount: 10%) {
+  & {
+    border-color: $color;
+    color: $color;
+  }
   &:hover,
   &:focus,
   &:active {
     border-color: darken($color, $amount);
-    color: darken($color, $amount * 2);
+    color: darken($color, $amount);
   }
 }
