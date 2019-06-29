@@ -296,19 +296,19 @@ body {
       background-color: #3747a3;
       border-color: #2a377d; }
   .btn-secondary {
-    background-color: #646464;
-    border-color: #4b4b4b;
+    background-color: #89c17c;
+    border-color: #6ab159;
     color: white; }
     .btn-secondary:hover, .btn-secondary:focus, .btn-secondary:active {
-      background-color: #4b4b4b;
-      border-color: #313131; }
+      background-color: #6ab159;
+      border-color: #549245; }
   .btn-tertiary {
-    background-color: #c8c8c8;
-    border-color: #afafaf;
+    background-color: #386c6d;
+    border-color: #274b4b;
     color: white; }
     .btn-tertiary:hover, .btn-tertiary:focus, .btn-tertiary:active {
-      background-color: #afafaf;
-      border-color: #959595; }
+      background-color: #274b4b;
+      border-color: #15292a; }
   .btn-light {
     background-color: #eee;
     border-color: #d5d5d5;
@@ -332,18 +332,18 @@ body {
       color: #3747a3; }
   .btn-outline-secondary {
     background-color: transparent;
-    border-color: #646464;
-    color: #646464; }
+    border-color: #89c17c;
+    color: #89c17c; }
     .btn-outline-secondary:hover, .btn-outline-secondary:focus, .btn-outline-secondary:active {
-      border-color: #4b4b4b;
-      color: #4b4b4b; }
+      border-color: #6ab159;
+      color: #6ab159; }
   .btn-outline-tertiary {
     background-color: transparent;
-    border-color: #c8c8c8;
-    color: #c8c8c8; }
+    border-color: #386c6d;
+    color: #386c6d; }
     .btn-outline-tertiary:hover, .btn-outline-tertiary:focus, .btn-outline-tertiary:active {
-      border-color: #afafaf;
-      color: #afafaf; }
+      border-color: #274b4b;
+      color: #274b4b; }
   .btn-outline-light {
     background-color: transparent;
     border-color: #eee;
@@ -457,9 +457,12 @@ body {
         transition: 200ms all ease-in-out; }
       .navbar__links-item:hover, .navbar__links-item:focus, .navbar__links-item:active {
         transform: scale(1.15); }
+      .navbar__links-item {
+        border-color: #4b5dc2;
+        color: #4b5dc2; }
       .navbar__links-item:hover, .navbar__links-item:focus, .navbar__links-item:active {
         border-color: #3747a3;
-        color: #2a377d; }
+        color: #3747a3; }
   @media (max-width: 900px) {
     .navbar__button {
       display: flex; }
@@ -487,9 +490,11 @@ body {
     .navbar__links {
       flex-direction: column;
       justify-content: space-between;
-      height: 75%;
-      font-size: 2rem;
-      font-weight: bolder; } }
+      padding-bottom: 1rem;
+      height: 100%;
+      font-weight: bolder; }
+      .navbar__links-item {
+        padding: 0; } }
 
 @media (prefers-reduced-motion: reduce) {
   * {
@@ -521,7 +526,6 @@ body {
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: -1;
   max-width: unset;
   filter: blur(0.5rem) !important;
   transform: scale(1.1); }
@@ -551,4 +555,10 @@ footer {
   Redesign sections?
   Create other pages
 
+
+
+
+  Redesign sections, use modifiers 
+
+  create container object
 */

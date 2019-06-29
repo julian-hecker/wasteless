@@ -16,22 +16,26 @@
 
 // =-= Layouts =-= //
 
-// =-= Objects =-= //
-@import './objects/button';
-// inputs
-// links
+// CSS Grid Layout
+// Main, Sidebar, Responsive
+// What happens if you try to grid a sticky item?
+
+
 
 // =-= Components =-= //
-// form
+// Sort from simple to complex; section, to navbar
+
+
+
+@import './components/button';
 @import './components/navbar';
-// footer
+@import './components/footer';
+// form
 // posts, comments, articles
 // modal
 // Sections
 
-
-// =-= Page Specifics =-= //
-
+// For page-specifics, Use component modifiers
 
 // =-= Utilities =-= //
 
@@ -68,7 +72,6 @@
 .cover-video {
   position: absolute;
   top: 0; right: 0; bottom: 0; left: 0;
-  z-index: -1;
   max-width: unset;
   filter: blur(.5rem) !important;
   transform: scale(1.1); // Prevents blurry edges
@@ -100,4 +103,10 @@ footer {
   Redesign sections?
   Create other pages
 
+
+
+
+  Redesign sections, use modifiers 
+
+  create container object
 */
