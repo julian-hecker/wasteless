@@ -137,9 +137,12 @@ $navbar-bkpt: bkpt(md);
     &__links {
       flex-direction: column;
       justify-content: space-between;
-      height: 75%;
-      font-size: 2rem;
+      padding-bottom: 1rem;
+      height: 100%;
       font-weight: bolder;
+      &-item {
+        padding: 0;
+      }
     }
   }
 }
