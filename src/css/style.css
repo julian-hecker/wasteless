@@ -544,6 +544,9 @@ footer {
   flex-wrap: wrap;
   margin: 1rem auto;
   width: 100%; }
+  .button-row .btn {
+    flex-grow: 1;
+    margin: .5rem; }
 
 #cover {
   background-color: transparent;
