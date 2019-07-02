@@ -633,6 +633,8 @@ body {
     .footer__category--about {
       width: 100%;
       text-align: justify; }
+    .footer__category--nav {
+      width: 25%; }
     .footer__category--legal {
       width: 100%;
       text-align: center; }

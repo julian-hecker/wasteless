@@ -16,9 +16,6 @@ $footer-bkpt: bkpt(md);
     flex-wrap: wrap;
   }
   &__category {
-    flex-grow: 1; // other flex items expand
-    padding: 1rem; // sets flex item spacing
-
     &-title {
       font-weight: bolder;
       text-transform: uppercase;
@@ -34,9 +31,15 @@ $footer-bkpt: bkpt(md);
       }
     }
 
+    flex-grow: 1; // other flex items expand
+    padding: 1rem; // sets flex item spacing
+
     &--about {
       width: 100%;
       text-align: justify;
+    }
+    &--nav {
+      width: 25%;
     }
     &--legal {
       width: 100%;
