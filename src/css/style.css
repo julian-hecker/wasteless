@@ -263,6 +263,50 @@ body {
   line-height: 1.5;
   text-align: left; }
 
+.section {
+  display: flex;
+  padding: 2rem; }
+  .section__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    position: relative;
+    max-width: 800px;
+    margin: auto; }
+
+.--home .section {
+  min-height: 50vh;
+  background-color: #eee; }
+  @media (min-width: 600px) {
+    .--home .section {
+      text-align: center; }
+      .--home .section .btn {
+        margin: auto; } }
+  .--home .section:not(:last-of-type) {
+    margin-bottom: 2rem; }
+
+.--home .cover {
+  position: relative;
+  overflow: hidden;
+  background-color: transparent;
+  color: #eee;
+  text-shadow: 0 0 0.25rem #333; }
+  .--home .cover__video {
+    z-index: -1;
+    background-color: #2a377d;
+    filter: blur(0.5rem) !important;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: auto;
+    height: auto;
+    max-width: none;
+    max-height: none;
+    min-width: 100%;
+    min-height: 100%; }
+
 .btn {
   display: inline-block;
   position: relative;
@@ -362,6 +406,74 @@ body {
     border-color: currentColor;
     color: currentColor; }
 
+.social-icons {
+  text-align: right; }
+
+.social-icons a {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  margin-left: 6px;
+  margin-right: 0;
+  border-radius: 100%;
+  background-color: #33353d; }
+
+.social-icons {
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none; }
+
+.social-icons li {
+  display: inline-block;
+  margin-bottom: 4px; }
+
+.social-icons li.title {
+  margin-right: 15px;
+  text-transform: uppercase;
+  color: #96a2b2;
+  font-weight: 700;
+  font-size: 13px; }
+
+.social-icons a {
+  background-color: #eceeef;
+  color: #818a91;
+  font-size: 16px;
+  display: inline-block;
+  line-height: 44px;
+  width: 44px;
+  height: 44px;
+  text-align: center;
+  margin-right: 8px;
+  border-radius: 100%;
+  -webkit-transition: all .2s linear;
+  -o-transition: all .2s linear;
+  transition: all .2s linear; }
+
+.social-icons a:active, .social-icons a:focus, .social-icons a:hover {
+  color: #fff;
+  background-color: #29aafe; }
+
+.social-icons.size-sm a {
+  line-height: 34px;
+  height: 34px;
+  width: 34px;
+  font-size: 14px; }
+
+.social-icons a.facebook:hover {
+  background-color: #3b5998; }
+
+.social-icons a.twitter:hover {
+  background-color: #00aced; }
+
+.social-icons a.linkedin:hover {
+  background-color: #007bb6; }
+
+@media (max-width: 767px) {
+  .social-icons li.title {
+    display: block;
+    margin-right: 0;
+    font-weight: 600; } }
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -378,18 +490,14 @@ body {
   background: linear-gradient(to right, #262626, #404040);
   border-bottom: 0.2rem solid #4b5dc2;
   color: #4b5dc2; }
-  .navbar ul, .navbar ol {
-    list-style-type: none;
-    padding: 0; }
   .navbar a {
     color: inherit;
     text-decoration: none; }
   .navbar__branding {
     display: flex;
     align-items: center;
-    width: min-content;
-    height: 100%;
-    flex-grow: 1; }
+    width: max-content;
+    height: 100%; }
     .navbar__branding-logo {
       width: 3rem;
       height: 3rem;
@@ -422,7 +530,7 @@ body {
       width: 100%;
       height: .25rem;
       background-color: #4b5dc2;
-      border-radius: 5rem;
+      border-radius: 100rem;
       transition: 300ms transform, 300ms opacity; }
     .navbar__button--active >
 .navbar__button-line:nth-child(1) {
@@ -490,51 +598,60 @@ body {
     .navbar__links {
       flex-direction: column;
       justify-content: space-between;
-      padding-bottom: 1rem;
+      padding-bottom: 5rem;
       height: 100%;
       font-weight: bolder; }
       .navbar__links-item {
         padding: 0; } }
+
+.footer {
+  padding: 2rem;
+  background-color: #333;
+  color: #eee; }
+  .footer__content {
+    margin: auto;
+    max-width: 800px;
+    display: flex;
+    flex-wrap: wrap; }
+  .footer__category {
+    flex-grow: 1;
+    padding: 1rem; }
+    .footer__category-title {
+      font-weight: bolder;
+      text-transform: uppercase; }
+    .footer__category-links a {
+      display: inline-block;
+      color: #6f6f6f;
+      text-decoration: none;
+      transform-origin: left; }
+      .footer__category-links a {
+        transition: 200ms all ease-in-out; }
+      .footer__category-links a:hover, .footer__category-links a:focus, .footer__category-links a:active {
+        transform: scale(1.15); }
+      .footer__category-links a:hover, .footer__category-links a:focus, .footer__category-links a:active {
+        color: #4b5dc2; }
+    .footer__category--about {
+      width: 100%;
+      text-align: justify; }
+    .footer__category--legal {
+      width: 100%;
+      text-align: center; }
+    .footer__category--social {
+      width: 25%; }
+    @media (min-width: 900px) {
+      .footer__category--about {
+        width: 50%; } }
+  .footer__hr {
+    margin: 2rem 4rem;
+    width: 100%;
+    border-top-color: #eee;
+    opacity: .5; }
 
 @media (prefers-reduced-motion: reduce) {
   * {
     animation: none !important;
     transition: none !important;
     scroll-behavior: auto !important; } }
-
-.section {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: stretch;
-  position: relative;
-  margin-bottom: 2rem;
-  padding: 2rem;
-  min-height: 50vh;
-  overflow: hidden;
-  background-color: #eee; }
-
-@media (min-width: 600px) {
-  .section {
-    text-align: center; }
-  .btn {
-    margin: auto; } }
-
-.cover-video {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: -1;
-  max-width: unset;
-  filter: blur(0.5rem) !important;
-  transform: scale(1.1); }
-
-footer {
-  padding: 2rem;
-  background-color: #333;
-  color: #eee; }
 
 .button-row {
   display: flex;
@@ -548,22 +665,12 @@ footer {
     flex-grow: 1;
     margin: .5rem; }
 
-#cover {
-  background-color: transparent;
-  color: #eee;
-  text-shadow: 0 0 0.25rem #333; }
-
 /* 
   TODO:
-  Links, Words, Inputs
-  Where to put footer, sections?
-  Redesign sections?
-  Create other pages
+  stop writing css, find a library already
 
+  
 
+  restructure html; each section gets a --home modifier
 
-
-  Redesign sections, use modifiers 
-
-  create container object
 */

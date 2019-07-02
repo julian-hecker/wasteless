@@ -1,6 +1,6 @@
+$navbar-bkpt: bkpt(md);
 $navbar-bg: color(dark);
 $navbar-color: color(primary);
-$navbar-bkpt: bkpt(md);
 
 
 .navbar {
@@ -19,20 +19,15 @@ $navbar-bkpt: bkpt(md);
   border-bottom: .2rem solid $navbar-color;
   color: $navbar-color;
 
-  ul, ol {
-    list-style-type: none;
-    padding: 0;
-  }
-   a {
+  a {
     color: inherit;
     text-decoration: none;
   }
   &__branding {
     display: flex;
     align-items: center;
-    width: min-content;
+    width: max-content;
     height: 100%;
-    flex-grow: 1;
 
     &-logo {
       width: 3rem; height: 3rem;
@@ -67,7 +62,7 @@ $navbar-bkpt: bkpt(md);
       width: 100%;
       height: .25rem;
       background-color: $navbar-color;
-      border-radius: 5rem;
+      border-radius: 100rem;
       transition: 300ms transform, 300ms opacity;
     }
     &--active > 
@@ -137,7 +132,7 @@ $navbar-bkpt: bkpt(md);
     &__links {
       flex-direction: column;
       justify-content: space-between;
-      padding-bottom: 1rem;
+      padding-bottom: 5rem;
       height: 100%;
       font-weight: bolder;
       &-item {
@@ -146,3 +141,6 @@ $navbar-bkpt: bkpt(md);
     }
   }
 }
+
+
+// add dropdown hover second-level navigation

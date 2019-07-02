@@ -16,6 +16,75 @@
 
 // =-= Layouts =-= //
 
+// .container {
+//   display: flex;
+//   flex-direction: row;
+//   justify-content: center;
+//   align-items: center;
+//   flex-wrap: wrap;
+//   position: relative;
+//   margin-right: auto;
+//   margin-left: auto;
+//   padding: 2rem;
+//   width: 100%; height: 100%;
+//   max-width: 1000px;
+// }
+
+.section {
+  display: flex;
+  padding: 2rem;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    position: relative;
+    max-width: 800px;
+    // height: 100%;
+    margin: auto;
+  }
+}
+
+.--home {
+
+  .section {
+    min-height: 50vh;
+    background-color: color(light);
+
+    @media (min-width: bkpt(sm)) {
+      text-align: center;
+      .btn {
+        margin: auto;
+      }
+    }
+    &:not(:last-of-type) {
+      margin-bottom: 2rem;
+    }
+  }
+  .cover {
+    position: relative;
+    overflow: hidden;
+    background-color: transparent;
+    color: #eee;
+    text-shadow: 0 0 .25rem color(dark);
+
+    &__video {
+      z-index: -1; // dont overlap text
+      background-color: darken(color(primary), 20%);
+      filter: blur(.5rem) !important;
+      // simulate object-fit: cover
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      width: auto; height: auto;
+      max-width: none; max-height: none;
+      min-width: 100%; min-height: 100%;
+    }
+  }
+}
+
+
 // CSS Grid Layout
 // Main, Sidebar, Responsive
 // What happens if you try to grid a sticky item?
@@ -28,6 +97,7 @@
 
 
 @import './components/button';
+@import './components/social';
 @import './components/navbar';
 @import './components/footer';
 // form
@@ -37,7 +107,16 @@
 
 // For page-specifics, Use component modifiers
 
+
+
+
 // =-= Utilities =-= //
+
+// @each $bkpt, $value in $breakpoints {
+// text-align, margin
+// }
+
+
 
 @media (prefers-reduced-motion: reduce) {
   * {
@@ -49,40 +128,9 @@
 
 // =-= Shame =-= //
 
-.section {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: stretch;
-  position: relative;
-  margin-bottom: 2rem;
-  padding: 2rem;
-  min-height: 50vh;
-  overflow: hidden;
-  background-color: color(light);
-}
-@media (min-width: bkpt(sm)) {
-  .section {
-    text-align: center;
-  }
-  .btn {
-    margin: auto;
-  }
-}
-.cover-video {
-  position: absolute;
-  top: 0; right: 0; bottom: 0; left: 0;
-  z-index: -1;
-  max-width: unset;
-  filter: blur(.5rem) !important;
-  transform: scale(1.1); // Prevents blurry edges
-}
 
-footer {
-  padding: 2rem;
-  background-color: color(dark);
-  color: color(light);
-}
+
+
 .button-row {
   display: flex;
   flex-direction: row;
@@ -96,23 +144,14 @@ footer {
     margin: .5rem;
   }
 }
-#cover {
-  background-color: transparent;
-  color: #eee;
-  text-shadow: 0 0 .25rem color(dark);
-}
+
 
 /* 
   TODO:
-  Links, Words, Inputs
-  Where to put footer, sections?
-  Redesign sections?
-  Create other pages
+  stop writing css, find a library already
 
+  
 
+  restructure html; each section gets a --home modifier
 
-
-  Redesign sections, use modifiers 
-
-  create container object
 */

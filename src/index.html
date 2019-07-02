@@ -44,69 +44,119 @@
     <nav class="navbar__nav" id="navbar__nav">
       <ul class="navbar__links">
         <li class="navbar__links-item">
-          <a class="navbar__links-link" href="#">Learn More</a>
+          <a class="navbar__links-link" href="#" tabindex="-1">Learn More</a>
         </li>
         <li class="navbar__links-item">
-          <a class="navbar__links-link" href="#">Shop</a>
+          <a class="navbar__links-link" href="#" tabindex="-1">Shop</a>
         </li>
         <li class="navbar__links-item">
-          <a class="navbar__links-link" href="#">Volunteer</a>
+          <a class="navbar__links-link" href="#" tabindex="-1">Volunteer</a>
         </li>
         <li class="navbar__links-item">
-          <a class="navbar__links-link" href="#">Community</a>
+          <a class="navbar__links-link" href="#" tabindex="-1">Community</a>
         </li>
         <li class="navbar__links-item">
-          <a class="navbar__links-link" href="#">Account</a>
+          <a class="navbar__links-link" href="#" tabindex="-1">Account</a>
         </li>
         
       </ul>
     </nav>
     
   </header>
-  <!-- <header>uppernav</header> -->
-  <section id="cover" class="section">
-    <video class="cover-video" autoplay muted loop>
-        <source src="asset/ocean-waste.mp4" type="video/mp4" />
-        <img src="asset/ocean-waste-img.jpg" alt="Page Cover -- Plastic Bottles in Ocean" />
-    </video>
-    <h1>Help Save The World</h1>
-    <p>Learn how to waste less, volunteer for a clean up, or visit our shop to live a wasteless life!</p>
-    <div class="button-row">
-      <a class="btn btn-primary btn-round" href="#blog">Learn More</a>
-      <a class="btn btn-primary btn-round" href="#volunteer">Volunteer</a>
-      <a class="btn btn-primary btn-round" href="#shop">Shop Wasteless</a>
-      
-    </div>
-  </section>
-  <section id="volunteer" class="section">
-    <h2>Volunteer</h2>
-    <p>At any of our clean-up events across Long Island, New York! 
-    <br /><br />
-    Work with people who care about the planet</p>
-    <a class="btn btn-outline btn-round" href="#">Check Events</a>
-    <!-- Map of cleanups, picture of volunteers -->
-  </section>
-  <section id="shop" class="section">
-    <h2>Shop Wasteless</h2>
-    <p>Check our shop of products that will help you life a Wasteless Life!</p>
-    <a class="btn btn-outline btn-round" href="#">Visit the Shop</a>
-    <!-- Carousel or Picture of products -->
-  </section>
-  <section id="blog" class="section">
-    <h2>Learn More</h2>
-    <p>Visit our Blog to learn about Wasteless, the pollution problem, and what we can do!</p>
-    <a class="btn btn-outline btn-round" href="#">Learn more</a>
-    <!-- Pictures of people explaining on a beach, blurred pictures of blog posts -->
-  </section>
-  <section id="community" class="section">
-    <h2>Join our Growing Community</h2>
-    <p>Join the discussion on Facebook, Instagram, Twitter, Discord, and our site forums!</p>
-    <a class="btn btn-outline btn-round" href="#">Join our community!</a>
-    <!-- Picture of people at a beach cleanup, or "Discussion" cartoon -->
-  </section>
-  <footer>
-    footer
-  </footer>
+  <main class="main --home">
+    <!-- <header>uppernav</header> -->
+    <section id="cover" class="cover section --cover">
+      <video class="cover__video" autoplay muted loop>
+          <source src="asset/ocean-waste.mp4" type="video/mp4" />
+          <img src="asset/ocean-waste-img.jpg" alt="Page Cover -- Plastic Bottles in Ocean" />
+      </video>
+      <div class="section__content">
+        <h1>Help Save The World</h1>
+        <p>Learn how to waste less, volunteer for a clean up, or visit our shop to live a wasteless life!</p>
+        <div class="button-row --home">
+          <a class="btn btn-primary btn-round" href="#blog">Learn More</a>
+          <a class="btn btn-primary btn-round" href="#volunteer">Volunteer</a>
+          <a class="btn btn-primary btn-round" href="#shop">Shop Wasteless</a>
+        </div>
+      </div>
+    </section>
+    <section id="volunteer" class="section --volunteer">
+      <div class="section__content">
+        <h2>Volunteer</h2>
+        <p>At any of our clean-up events across Long Island, New York! 
+        <br /><br />
+        Work with people who care about the planet</p>
+        <a class="btn btn-outline btn-round" href="#">Check Events</a>
+        <!-- Map of cleanups, picture of volunteers -->
+      </div>
+    </section>
+    <section id="shop" class="section --shop">
+      <div class="section__content">
+        <h2>Shop Wasteless</h2>
+        <p>Check our shop of products that will help you life a Wasteless Life!</p>
+        <a class="btn btn-outline btn-round" href="#">Visit the Shop</a>
+        <!-- Carousel or Picture of products -->
+      </div>
+    </section>
+    <section id="blog" class="section --blog">
+      <div class="section__content">
+        <h2>Learn More</h2>
+        <p>Visit our Blog to learn about Wasteless, the pollution problem, and what we can do!</p>
+        <a class="btn btn-outline btn-round" href="#">Learn more</a>
+        <!-- Pictures of people explaining on a beach, blurred pictures of blog posts -->
+      </div>
+    </section>
+    <section id="community" class="section --community">
+      <div class="section__content">
+        <h2>Join our Growing Community</h2>
+        <p>Join the discussion on Facebook, Instagram, Twitter, Discord, and our site forums!</p>
+        <a class="btn btn-outline btn-round" href="#">Join our community!</a>
+        <!-- Picture of people at a beach cleanup, or "Discussion" cartoon -->
+      </div>
+    </section>
+    <footer class="footer">
+        <div class="footer__content">
+          
+            <div class="footer__category footer__category--about"> <!-- takes full on xs, half on md+ -->
+              <p class="footer__category-title">About</p>
+              <p>Wasteless.US is a platform that is taking action on the issues of waste and pollution that plague our planet today. We provide information, community, steps to action, and eco-friendly products to help take on this daunting task. </p>
+            </div>
+  
+            <div class="footer__category"> <!-- takes half on xs, 1/4 on md+ -->
+              <p class="footer__category-title">Category</p>
+              <ul class="footer__category-links">
+                <li><a href="">item</a></li>
+                <li><a href="">item</a></li>
+                <li><a href="">item</a></li>
+                <li><a href="">item</a></li>
+                <li><a href="">item</a></li>
+              </ul>
+            </div>
+  
+            <div class="footer__category">
+              <p class="footer__category-title">Category</p>
+              <ul class="footer__category-links">
+                <li><a href="">About Us</a></li>
+                <li><a href="">Contact Us</a></li>
+                <li><a href="">Contribute</a></li>
+                <li><a href="">Privacy Policy</a></li>
+                <li><a href="">Sitemap</a></li>
+              </ul>
+            </div>
+          
+          <hr class="footer__hr">
+        </div>
+        <div class="footer__content">
+          
+            <div class="footer__category footer__category--legal">
+              <p class="copyright-text">Copyright &copy; 2019 All Rights Reserved by 
+           <a href="#">Wasteless.US</a>.
+              </p>
+            </div>
+          
+        </div>
+    </footer>
+  </main>
 </body>
 </html>
 
