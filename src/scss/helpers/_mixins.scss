@@ -39,11 +39,15 @@
 
 @mixin hover-grow($amount: 1.15, $duration: 200ms) {
   & {
+    z-index: 0;
+    opacity: 1;
     transition: $duration all ease-in-out;
   }
   &:hover,
   &:focus,
   &:active {
+    z-index: 1;
+    opacity: .9;
     transform: scale($amount);
   }
 }

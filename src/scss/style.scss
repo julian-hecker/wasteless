@@ -16,86 +16,9 @@
 
 // =-= Layouts =-= //
 
-// .container {
-//   display: flex;
-//   flex-direction: row;
-//   justify-content: center;
-//   align-items: center;
-//   flex-wrap: wrap;
-//   position: relative;
-//   margin-right: auto;
-//   margin-left: auto;
-//   padding: 2rem;
-//   width: 100%; height: 100%;
-//   max-width: 1000px;
-// }
-
-.section {
-  display: flex;
-  padding: 2rem;
-
-  &__content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: stretch;
-    position: relative;
-    max-width: 800px;
-    // height: 100%;
-    margin: auto;
-  }
-}
-
-.--home {
-
-  .section {
-    min-height: 50vh;
-    background-color: color(light);
-
-    @media (min-width: bkpt(sm)) {
-      text-align: center;
-      .btn {
-        margin: auto;
-      }
-    }
-    &:not(:last-of-type) {
-      margin-bottom: 2rem;
-    }
-  }
-  .cover {
-    position: relative;
-    overflow: hidden;
-    background-color: transparent;
-    color: #eee;
-    text-shadow: 0 0 .25rem color(dark);
-
-    &__video {
-      z-index: -1; // dont overlap text
-      background-color: darken(color(primary), 20%);
-      filter: blur(.5rem) !important;
-      // simulate object-fit: cover
-      position: absolute;
-      top: 50%; left: 50%;
-      transform: translate(-50%, -50%);
-      width: auto; height: auto;
-      max-width: none; max-height: none;
-      min-width: 100%; min-height: 100%;
-    }
-  }
-}
-
-
-// CSS Grid Layout
-// Main, Sidebar, Responsive
-// What happens if you try to grid a sticky item?
-
-
 
 // =-= Components =-= //
-// Sort from simple to complex; section, to navbar
-
-
-
+@import './components/section';
 @import './components/button';
 @import './components/social';
 @import './components/navbar';
