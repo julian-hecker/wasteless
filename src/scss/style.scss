@@ -1,20 +1,23 @@
-// =-= Libraries =-= //
-@import './libraries/normalize';
+/* =-= Wasteless.US Stylesheet =-= */
 
 // =-= Helpers =-= //
 @import './helpers/functions';
 @import './helpers/mixins';
+
 
 // =-= Variables =-= //
 @import './variables/breakpoints';
 @import './variables/colors';
 @import './variables/fonts';
 
+
+// =-= Libraries =-= //
+@import './libraries/normalize';
+
+
 // =-= Base =-= //
 @import './bases/reset';
 @import './bases/typography';
-
-// =-= Layouts =-= //
 
 
 // =-= Components =-= //
@@ -35,9 +38,14 @@
 
 // =-= Utilities =-= //
 
-// @each $bkpt, $value in $breakpoints {
-// text-align, margin
-// }
+.shadow-dark {
+  text-shadow: 0 0 .25rem color(dark);
+}
+.shadow-light {
+  text-shadow: 0 0 .25rem color(light);
+}
+
+
 
 
 
@@ -54,19 +62,6 @@
 
 
 
-.button-row {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-content: space-between;
-  flex-wrap: wrap;
-  margin: 1rem auto;
-  width: 100%; 
-  .btn {
-    flex-grow: 1;
-    margin: .5rem;
-  }
-}
 
 
 /* 
@@ -74,7 +69,7 @@
   stop writing css, find a library already
 
   
+  // Create Bootstrap Utilities Repo, import here
 
-  restructure html; each section gets a --home modifier
 
 */
