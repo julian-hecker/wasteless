@@ -1,8 +1,10 @@
 
 .section {
   display: flex;
+  position: relative;
   padding: 2rem;
   min-height: 50vh;
+  overflow: hidden;
   background-color: color(light);
   color: color(dark);
   text-align: center;
@@ -19,7 +21,6 @@
     margin: auto;
   }
   &__bg-video {
-    z-index: -1; // dont overlap text
     background-color: darken(color(primary), 20%);
     // simulate object-fit: cover
     position: absolute;
@@ -33,17 +34,15 @@
     }
   }
 
-
   &--dark {
     background-color: color(dark);
     color: color(light);
   }
 
-  &--cover {
-    position: relative;
-    overflow: hidden;
-    background-color: transparent;
-    color: #eee;
-    text-shadow: 0 0 .25rem color(dark);
-  }
+
+  
+
+  // &--cover {
+  //   background-color: transparent;
+  // }
 }
