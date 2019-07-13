@@ -39,10 +39,10 @@
 // =-= Utilities =-= //
 
 .shadow-dark {
-  text-shadow: 0 0 .25rem color(dark);
+  text-shadow: 0 0 .5rem color(dark);
 }
 .shadow-light {
-  text-shadow: 0 0 .25rem color(light);
+  text-shadow: 0 0 .5rem color(light);
 }
 
 
@@ -66,10 +66,8 @@
 
 /* 
   TODO:
-  stop writing css, find a library already
-
-  
-  // Create Bootstrap Utilities Repo, import here
-
+  - stop writing css, find a library already
+  - Create section layouts (two column, three column, responsives, etc.
+  - background slider
 
 */

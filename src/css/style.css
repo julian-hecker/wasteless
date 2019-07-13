@@ -284,7 +284,6 @@ body {
     max-width: 800px;
     margin: auto; }
   .section__bg-video {
-    background-color: #2a377d;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -300,6 +299,9 @@ body {
   .section--dark {
     background-color: #333;
     color: #eee; }
+  .section--light {
+    background-color: #eee;
+    color: #333; }
 
 .btn {
   display: inline-block;
@@ -672,11 +674,11 @@ body {
     border-top-color: #eee;
     opacity: .5; }
 
-.shadow-dark {
-  text-shadow: 0 0 0.25rem #333; }
+.shadow-dark, .section--dark {
+  text-shadow: 0 0 0.5rem #333; }
 
-.shadow-light {
-  text-shadow: 0 0 0.25rem #eee; }
+.shadow-light, .section--light {
+  text-shadow: 0 0 0.5rem #eee; }
 
 @media (prefers-reduced-motion: reduce) {
   * {
@@ -686,10 +688,8 @@ body {
 
 /* 
   TODO:
-  stop writing css, find a library already
-
-  
-  // Create Bootstrap Utilities Repo, import here
-
+  - stop writing css, find a library already
+  - Create section layouts (two column, three column, responsives, etc.
+  - background slider
 
 */

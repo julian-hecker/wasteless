@@ -21,8 +21,6 @@
     margin: auto;
   }
   &__bg-video {
-    background-color: darken(color(primary), 20%);
-    // simulate object-fit: cover
     position: absolute;
     top: 50%; left: 50%;
     transform: translate(-50%, -50%);
@@ -37,6 +35,12 @@
   &--dark {
     background-color: color(dark);
     color: color(light);
+    @extend .shadow-dark;
+  }
+  &--light {
+    background-color: color(light);
+    color: color(dark);
+    @extend .shadow-light;
   }
 
 
