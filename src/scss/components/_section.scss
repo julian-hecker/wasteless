@@ -19,7 +19,21 @@
     width: 100%;
     max-width: 800px;
     margin: auto;
+    & :not(:last-child) {
+      margin-bottom: .75rem;
+    }
   }
+
+  &__heading {
+
+  }
+  &__copy {
+
+  }
+  &__cta {
+
+  }
+
   &__bg-video {
     position: absolute;
     top: 50%; left: 50%;
@@ -28,7 +42,7 @@
     max-width: none; max-height: none;
     min-width: 100%; min-height: 100%;
     &--blur {
-      filter: blur(.5rem) !important;
+      filter: blur(.25rem) !important;
     }
   }
 
@@ -44,9 +58,4 @@
   }
 
 
-  
-
-  // &--cover {
-  //   background-color: transparent;
-  // }
 }
