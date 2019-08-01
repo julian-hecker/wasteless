@@ -14,7 +14,6 @@
 // =-= Libraries =-= //
 @import './libraries/rfs';
 @import './libraries/normalize';
-@import './libraries/bootstrap-utilities';
 
 
 // =-= Base =-= //
@@ -25,7 +24,6 @@
 // =-= Objects =-= //
 @import './objects/button';
 @import './objects/card';
-
 
 
 // =-= Components =-= //
@@ -45,14 +43,10 @@
 
 // =-= Utilities =-= //
 
-.shadow-dark {
-  text-shadow: 0 0 .5rem color(dark);
-}
-.shadow-light {
-  text-shadow: 0 0 .5rem color(light);
-}
+@import './utilities/shadow';
 
-
+// from Libraries
+@import './libraries/bootstrap-utilities';
 
 
 
