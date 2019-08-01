@@ -12,7 +12,9 @@
 
 
 // =-= Libraries =-= //
+@import './libraries/rfs';
 @import './libraries/normalize';
+@import './libraries/bootstrap-utilities';
 
 
 // =-= Base =-= //
@@ -20,10 +22,14 @@
 @import './bases/typography';
 
 
+// =-= Objects =-= //
+@import './objects/button';
+@import './objects/card';
+
+
+
 // =-= Components =-= //
-@import './components/card';
 @import './components/section';
-@import './components/button';
 @import './components/social';
 @import './components/navbar';
 @import './components/footer';
@@ -69,6 +75,7 @@
   TODO:
   - stop writing css, find a library already
   - Create section layouts (two column, three column, responsives, etc.
+  - use bootstrap utilities & grid
   - background slider
 
 */
